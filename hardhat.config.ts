@@ -34,6 +34,9 @@ const config: HardhatUserConfig = {
       url: MUMBAI_RPC_URL,
       accounts: [PRIVATE_KEY],
       chainId: 80001,
+      // gas: 600000, // Force the GAS due to UNPREDICTABLE_GAS_LIMIT error
+      // gas: 8000000,
+      // gasPrice: 30000000000,
     },
   },
   solidity: {

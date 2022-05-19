@@ -32,20 +32,20 @@ export async function propose(args: any[], functionToCall: string, proposalDescr
     const proposalId = proposeReceipt.events[0].args.proposalId
     console.log(`Proposed with proposal ID:\n  ${proposalId}`)
 
-    // const proposalState = await governor.state(proposalId)
-    // const proposalSnapShot = await governor.proposalSnapshot(proposalId)
-    // const proposalDeadline = await governor.proposalDeadline(proposalId)
+    const proposalState = await governor.state(proposalId)
+    const proposalSnapShot = await governor.proposalSnapshot(proposalId)
+    const proposalDeadline = await governor.proposalDeadline(proposalId)
     // save the proposalId
     let proposals = JSON.parse(fs.readFileSync(proposalsFile, "utf8"))
     proposals[network.config.chainId!.toString()].push(proposalId.toString())
     fs.writeFileSync(proposalsFile, JSON.stringify(proposals))
 
     // The state of the proposal. 1 is not passed. 0 is passed.
-    // console.log(`Current Proposal State: ${proposalState}`)
+    console.log(`Current Proposal State: ${proposalState}`)
     // What block # the proposal was snapshot
-    // console.log(`Current Proposal Snapshot: ${proposalSnapShot}`)
+    console.log(`Current Proposal Snapshot: ${proposalSnapShot}`)
     // The block number the proposal voting expires
-    // console.log(`Current Proposal Deadline: ${proposalDeadline}`)
+    console.log(`Current Proposal Deadline: ${proposalDeadline}`)
 }
 
 propose([NEW_STORE_VALUE], FUNC, PROPOSAL_DESCRIPTION)
