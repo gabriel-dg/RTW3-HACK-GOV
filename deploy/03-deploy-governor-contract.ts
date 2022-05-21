@@ -39,4 +39,4 @@ const deployGovernorContract: DeployFunction = async function (hre: HardhatRunti
 }
 
 export default deployGovernorContract
-// deployGovernorContract.tags = ["all", "governor"]
+deployGovernorContract.tags = ["all", "governor"]
