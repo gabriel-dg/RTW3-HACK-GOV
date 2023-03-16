@@ -22,4 +22,4 @@ FrontEnd:
 Figma for prototyping
 ReactJS + Tailwindcss
 
-For more details read [RTW3 Hackathon_Slide](/RTW3 Hackathon_Slide.pdf) [Hackathon_Slide](/RTW3 Hackathon_Slide.pdf)
+For more details read [RTW3 Hackathon_Slide](/RTW3 Hackathon_Slide.pdf) [Hackathon_Slide](RTW3 Hackathon_Slide.pdf)
