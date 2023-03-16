@@ -21,3 +21,5 @@ SCs deployed on Polygon Mumbai
 FrontEnd:
 Figma for prototyping
 ReactJS + Tailwindcss
+
+For more details read `RTW3 Hackathon_Slide.pdf`
